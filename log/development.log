@@ -2595,3 +2595,36 @@ Started GET "/assets/header-1ee7e17233356eb2575a81ed4e28e058c9c0549d3160e866b214
 
 
 Started GET "/assets/portfolioheroimage3-1503b1dcf43d12857b6f1b5c45c1a2a9f0f1d81f89a93471fa54845b67045007.jpg" for 127.0.0.1 at 2016-06-14 14:28:47 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-14 14:32:56 +0200
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-ec037793f2d9ca79838790b3e8c8ea554e4e424edbcf217a8bf1ccc8faac1eb2.css?body=1" for 127.0.0.1 at 2016-06-14 14:32:56 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-06-14 14:32:56 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-06-14 14:32:56 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-06-14 14:32:56 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-06-14 14:32:56 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-06-14 14:32:56 +0200
+
+
+Started GET "/assets/application.self-dec150e575ab7a96eb1b9641a3799ff79f11347673b90bcee263dfe77f83a899.js?body=1" for 127.0.0.1 at 2016-06-14 14:32:56 +0200
+
+
+Started GET "/assets/header-1ee7e17233356eb2575a81ed4e28e058c9c0549d3160e866b2143a8a47fecca3.jpg" for 127.0.0.1 at 2016-06-14 14:32:56 +0200
+
+
+Started GET "/assets/portfolioheroimage3-1503b1dcf43d12857b6f1b5c45c1a2a9f0f1d81f89a93471fa54845b67045007.jpg" for 127.0.0.1 at 2016-06-14 14:32:56 +0200
