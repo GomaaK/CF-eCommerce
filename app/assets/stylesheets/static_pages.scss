@@ -7,10 +7,22 @@ h1 {
 }
 
 .navbar {
-	width:33%;
+	width:100%;
 	margin: 0 auto;
+	position:relative;
 }
-nav {
+
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+/*nav {
 
 	ul {
     list-style-type: none;
@@ -32,7 +44,7 @@ nav {
     background-color: #111;
 	}
 
-}
+} */
 
 #sticky {
     padding: 0.2ex;
