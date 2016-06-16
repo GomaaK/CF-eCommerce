@@ -1,0 +1,74 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$blue : #4FC9FF;
+$red : #FC695B;
+$dark_grey : #183643;
+$medium_grey :#67757B;
+
+$break-small: 320px;
+$break-large: 1200px;
+
+
+.wrapper {
+	width:95%;
+	margin: 0 auto;
+}
+
+.product-header{
+	background-color: $blue;
+	color: white;
+	text-align:center;
+	height:50px;
+	h4 {
+		padding-top:10px;
+		font-size:25px;
+	}
+
+}
+
+.description {
+	padding-top:20px;
+	text-align:center;
+}
+
+
+
+.product-img {
+	width: 33%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.action-buttons {
+	text-align: center;
+}
+
+.new-product {
+	clear:both;
+}
+
+.button {
+	outline: none;
+    border: none;
+    background: $red;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 0 -1px 0 #c65145;
+    border-radius: 4px;
+    position: relative;
+    height: 40px;
+    width: 175px;
+    padding-bottom: 5px;
+}
+
+.button a:hover{
+	color:white;
+	background-color: $red;	
+}
+
+.action-buttons {
+	border-top: 1px solid $medium_grey;
+}
