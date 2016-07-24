@@ -10,9 +10,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="header">
-	<%= image_tag("header.jpg", class: "img-responsive my-image") %>
-</div>
 <div id="sticky-anchor"></div>
 <div id="sticky">
 	<!-- Collect the nav links, forms, and other content for toggling -->
@@ -28,7 +25,8 @@
       </div> <!--end navbar-header -->
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-        	<li><a href="#">Home</a></li>
+          <li><%= link_to 'Home', root_path %></li>
+        	<li><%=link_to 'Products', products_path %></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
 

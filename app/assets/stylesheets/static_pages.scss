@@ -1,5 +1,6 @@
 
 $grey : #67757B;
+$blue : #4FC9FF;
 
 h1 {
 	color: $grey;
@@ -73,5 +74,23 @@ h1 {
 	padding-top:25px;
 	height: 50px;
 	clear:both;
+}
+
+.product-name{
+  position: absolute;
+  bottom: 85%;
+  left: 5%;
+  z-index: 20;
+  color: $blue;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+.product-price{
+  position: absolute;
+  bottom: 80%;
+  left: 10%;
+  z-index: 20;
+  color: $blue;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
 }
 
