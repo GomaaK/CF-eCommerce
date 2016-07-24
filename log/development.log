@@ -14457,3 +14457,124 @@ Migrating to AddPriceToProducts (20160710123343)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160710123343"]]
   [1m[36m (357.8ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-24 17:03:59 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (414.2ms)
+Completed 200 OK in 527ms (Views: 516.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-c8b020d5cf153245520b31a1ac0707a2ef719f2789ba056d068e41cdf763d950.css?body=1" for 127.0.0.1 at 2016-07-24 17:04:00 +0200
+
+
+Started GET "/assets/products.self-b441628a56c0496de13bbef4f93c04804b9051d386bc2f73c0135b129c9fc45e.css?body=1" for 127.0.0.1 at 2016-07-24 17:04:00 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-24 17:04:00 +0200
+
+
+Started GET "/assets/static_pages.self-8366c994aabcdb2eb256ddfd7f29eafc2f5b70773442edaebddbb55d927955d1.css?body=1" for 127.0.0.1 at 2016-07-24 17:04:00 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-24 17:04:00 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-24 17:04:00 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-07-24 17:04:00 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 17:04:00 +0200
+
+
+Started GET "/assets/application.self-dec150e575ab7a96eb1b9641a3799ff79f11347673b90bcee263dfe77f83a899.js?body=1" for 127.0.0.1 at 2016-07-24 17:04:00 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 17:04:00 +0200
+
+
+Started GET "/assets/header-1ee7e17233356eb2575a81ed4e28e058c9c0549d3160e866b2143a8a47fecca3.jpg" for 127.0.0.1 at 2016-07-24 17:04:00 +0200
+
+
+Started GET "/assets/portfolioheroimage3-1503b1dcf43d12857b6f1b5c45c1a2a9f0f1d81f89a93471fa54845b67045007.jpg" for 127.0.0.1 at 2016-07-24 17:04:00 +0200
+
+
+Started GET "/products" for 127.0.0.1 at 2016-07-24 17:08:30 +0200
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.9ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 120ms (Views: 44.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bmx-0b8f83c0db69a9d1e1f490f847badbc22154a18de57c0fa827305d742a23ded0.jpg" for 127.0.0.1 at 2016-07-24 17:08:30 +0200
+
+
+Started GET "/assets/bmx2-ce90afafdb22c43a4a23a0e2c4dbd23920a60daa7684084eb390deaebc172b62.jpg" for 127.0.0.1 at 2016-07-24 17:08:30 +0200
+
+
+Started GET "/assets/bike-bd1704eea67a94516465c58db0af587ec0c5336f3171c83d6f97a24afbf27934.jpg" for 127.0.0.1 at 2016-07-24 17:08:30 +0200
+
+
+Started GET "/assets/bike2-2f882d70d4d2b9d1f34430628f0012e753c9c1f18f9680b7539787fa91889b7d.jpg" for 127.0.0.1 at 2016-07-24 17:08:30 +0200
+
+
+Started GET "/products" for 127.0.0.1 at 2016-07-24 17:08:41 +0200
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/products.self-b441628a56c0496de13bbef4f93c04804b9051d386bc2f73c0135b129c9fc45e.css?body=1" for 127.0.0.1 at 2016-07-24 17:08:41 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-24 17:08:41 +0200
+
+
+Started GET "/assets/scaffolds.self-c8b020d5cf153245520b31a1ac0707a2ef719f2789ba056d068e41cdf763d950.css?body=1" for 127.0.0.1 at 2016-07-24 17:08:41 +0200
+
+
+Started GET "/assets/static_pages.self-8366c994aabcdb2eb256ddfd7f29eafc2f5b70773442edaebddbb55d927955d1.css?body=1" for 127.0.0.1 at 2016-07-24 17:08:41 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-07-24 17:08:41 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-24 17:08:41 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-07-24 17:08:41 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 17:08:41 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-24 17:08:41 +0200
+
+
+Started GET "/assets/application.self-dec150e575ab7a96eb1b9641a3799ff79f11347673b90bcee263dfe77f83a899.js?body=1" for 127.0.0.1 at 2016-07-24 17:08:41 +0200
+
+
+Started GET "/assets/bmx-0b8f83c0db69a9d1e1f490f847badbc22154a18de57c0fa827305d742a23ded0.jpg" for 127.0.0.1 at 2016-07-24 17:08:41 +0200
+
+
+Started GET "/assets/bmx2-ce90afafdb22c43a4a23a0e2c4dbd23920a60daa7684084eb390deaebc172b62.jpg" for 127.0.0.1 at 2016-07-24 17:08:41 +0200
+
+
+Started GET "/assets/bike-bd1704eea67a94516465c58db0af587ec0c5336f3171c83d6f97a24afbf27934.jpg" for 127.0.0.1 at 2016-07-24 17:08:41 +0200
+
+
+Started GET "/assets/header-1ee7e17233356eb2575a81ed4e28e058c9c0549d3160e866b2143a8a47fecca3.jpg" for 127.0.0.1 at 2016-07-24 17:08:41 +0200
+
+
+Started GET "/assets/bike2-2f882d70d4d2b9d1f34430628f0012e753c9c1f18f9680b7539787fa91889b7d.jpg" for 127.0.0.1 at 2016-07-24 17:08:41 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-24 17:13:19 +0200
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1
+  Rendered static_pages/landing_page.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 32ms (Views: 23.4ms | ActiveRecord: 0.6ms)
