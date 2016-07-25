@@ -27,8 +27,16 @@
         <ul class="nav navbar-nav">
           <li><%= link_to 'Home', root_path %></li>
         	<li><%=link_to 'Products', products_path %></li>
-
         </ul>
+          <ul class="nav navbar-nav navbar-right dark">
+            <li>
+              <%= form_tag("/products", method: "get") do %>
+                <%= text_field_tag(:q,nil, class: "search",placeholder: 'Enter search term...') %>
+                <%= submit_tag("Search", class: "search") %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
       </div> <!-- nav -->
     </div> <!-- end nav container-->
   </nav> <!-- end navbar-->

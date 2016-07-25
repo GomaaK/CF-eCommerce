@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+
+
+form{
+	width:500px;
+	margin:0 auto;
+}
+.search { 
+	padding:6px 15px 6px 30px;
+	margin:3px;
+	margin-top:10px; 
+}
+
+.dark input[type=submit]{
+	margin-left:-10px;
+	background-color: #8ee5ee;
+	border: 0px ;
+}
+
+
+.dark {
+	width:35%;
+	height:50px;
+
+}
+
+.dark input[type=text]{
+	border:1px solid #2a2e31;
+	border-radius: 15px 0px 0px 15px;
+	background-color:#626774;
+	color:#dddddd;
+}
+
+
