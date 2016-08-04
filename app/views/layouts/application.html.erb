@@ -53,8 +53,13 @@
     </div> <!-- end nav container-->
   </nav> <!-- end navbar-->
 </div>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<% if notice %>
+    <p id="notice" class="alert alert-info"><%= notice %>
+<% elsif alert %>
+    <p id="alert" class="alert alert-info"><%= alert %>
+    <button type="button" class="btn btn-default" id="close" onclick="$('.alert').hide();">Close</button></p>
+<% end %>
+
 
 <%= yield %>
 
