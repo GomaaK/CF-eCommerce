@@ -15,35 +15,49 @@
  */
 
 
-/*form{
-	width:500px;
-	margin:0 auto;
-}
-.search { 
-	padding:6px 15px 6px 30px;
-	margin:3px;
-	margin-top:10px; 
-}
-
-.dark input[type=submit]{
-	margin-left:-10px;
-	background-color: #8ee5ee;
-	border: 0px ;
-}
-
-
-.dark {
+/* DEVISE CSS */
+.signin-wrapper{
 	width:35%;
-	height:50px;
-
+	margin: 0 auto;
+	padding-top: 50px;
+	padding-bottom: 40px;
 }
 
-.dark input[type=text]{
-	border:1px solid #2a2e31;
-	border-radius: 15px 0px 0px 15px;
-	background-color:#626774;
-	color:#dddddd;
-} */
+.new-user {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.new-user .form-signin-heading,
+.new-user .checkbox {
+  margin-bottom: 10px;
+}
+.new-user .checkbox {
+  font-weight: normal;
+}
+.new-user .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.new-user .form-control:focus {
+  z-index: 2;
+}
+.new-user input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.new-user input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
 
 
 

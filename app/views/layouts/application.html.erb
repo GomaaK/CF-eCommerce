@@ -29,6 +29,15 @@
         	<li><%=link_to 'Products', products_path %></li>
           <li><%= link_to 'Contact',static_pages_contact_path %></li>
         </ul>
+        <ul class ="nav pull-right">
+          <li>
+            <% if user_signed_in? %>
+              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+            <% else %>
+              <%= link_to('Login', new_user_session_path) %>
+            <% end %>
+          </li>
+        </ul>
 
         <div class="col-sm-3 col-md-3">
         <%= form_tag("/products", method: "get", role: "search", class: "navbar-form") do %>
@@ -44,6 +53,8 @@
     </div> <!-- end nav container-->
   </nav> <!-- end navbar-->
 </div>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
 <%= yield %>
 
