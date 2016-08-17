@@ -5,6 +5,7 @@
 <%= link_to 'Back to Products', products_path %>
 <p>
 
+
 <div class="container-fluid">
     <div class="content-wrapper">	
 		<div class="item-container">	
@@ -18,20 +19,11 @@
 				</div>					
 				<div class="col-md-3">
 					<div class="product-title"> <%= @product.name %></div>
+					</br>
 					<div class="product-desc"><%= @product.description %></div>
 					<div class="product-rating">
-					<%if @product.rating_average.present? %>
-						<% for i in 1..5 %>
-							<% if i <= @product.rating_average.round(0) %>
-										<i class="fa fa-star gold"></i>
-							<% else %>
-								<i class="fa fa-star-o"></i> 
-							<% end %>
-						<% end %>
-					<%else %>
-						<i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> 
-					<% end %>
-								
+					</br>
+					<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>		
 					</div>
 					<hr>
 					<div class="product1-price">€<%= @product.price %></div>
@@ -73,35 +65,9 @@
 					</div>
 					<div class="tab-pane fade" id="service-three">
 						<section class="container">
-							<%if @product.highest_rating_comment.blank? %>
-								<p><i>No comments</i></p>
-							<% else %>
-								<div class="highest-rating-comment">
-									<strong><%= @product.highest_rating_comment.body %></strong>
-									<% for i in 1..5 %>
-										<% if i <= @product.highest_rating_comment.rating  %>
-											<i class="fa fa-star gold"></i>
-										<% else %>
-											<i class="fa fa-star-o"></i> 
-										<% end %>
-									<% end %>
-								</div>
-								<% @product.comments.each do |comment| %>
-									<% if comment.body != @product.highest_rating_comment.body %>
-										<p><%= comment.body %>
-											<% for i in 1..5 %>
-												<% if i <= comment.rating  %>
-													<i class="fa fa-star gold"></i>
-												<% else %>
-													<i class="fa fa-star-o"></i> 
-												<% end %>
-											<% end %>
-										</p>
-									<% end %>
-								<% end %>
-							<% end %>
+							<%= render 'comments' %>
 						</section>
-												
+						<%= render 'new_comment' %>										
 					</div>
 				</div>
 				<hr>

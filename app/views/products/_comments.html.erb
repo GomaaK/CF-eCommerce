@@ -1,0 +1,10 @@
+<%if @product.comments.blank? %>
+	<p><i>No comments</i></p>
+<% else %>
+	<% @product.comments.each do |c| %>
+		 <p><%= c.user.first_name %> <small><em><%= "#{time_ago_in_words(c.created_at)} ago" %></em></small></p>
+			<p><%= c.body %>
+			<div class="rated" data-score="<%= c.rating %>"></div>
+			</p>
+		<% end %>
+<% end %>

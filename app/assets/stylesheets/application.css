@@ -57,6 +57,10 @@
   border-top-right-radius: 0;
 }
 
+.nav > li > a {
+  padding:16px 16px;
+  border-radius: 5px;
+}
 
 
 
