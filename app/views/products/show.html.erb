@@ -64,10 +64,12 @@
 						</section>		
 					</div>
 					<div class="tab-pane fade" id="service-three">
+					<%= render 'new_comment' %>	
 						<section class="container">
 							<%= render 'comments' %>
+							<%= will_paginate @comments %>
 						</section>
-						<%= render 'new_comment' %>										
+															
 					</div>
 				</div>
 				<hr>

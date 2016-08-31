@@ -10,67 +10,90 @@ $break-small: 320px;
 $break-large: 1200px;
 
 
-.wrapper {
-	width:95%;
-	margin: 0 auto;
-}
 
-.product-header{
-	background-color: $blue;
-	color: white;
-	text-align:center;
-	height:50px;
-	h4 {
-		padding-top:10px;
-		font-size:25px;
-	}
+/******************************************
+			INDEX
+*******************************************/
 
-}
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 
-.description {
-	padding-top:20px;
-	text-align:center;
+h4 {
+	margin-top: 0px
 }
 
 
-
-.product-img {
-	width: 33%;
-	text-align: center;
-	margin: 0 auto;
+.product-container {
+	border-radius: 4px 4px 4px 4px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+    margin: 2px;
+    min-width: 375px;
 }
 
-.action-buttons {
-	text-align: center;
-}
-
-.new-product {
-	clear:both;
-}
-
-.button {
-	outline: none;
-    border: none;
-    background: $red;
-    color: white;
+.product-title {
+	border-bottom: 1px solid #E3E3E3;
+    height: 31px;
+    padding: 13px 10px;
     text-align: center;
-    font-weight: bold;
+}
+
+.product-image{
+	text-align: center;
+}
+
+.product-img{
+	padding:1%;
+	margin: 0 auto;
+}
+
+.product-options {
+	background: #eee;
+    border-radius: 4px 4px 4px 4px;
+    height: 55px;
+    list-style-type: none;
+    margin-bottom: 10px;
+
+}
+
+.price {
+	border-right: 1px solid #D4D4D4;
+    float: left;
+    font-size: 24px;
+    line-height: 55px;
+    text-align: center;
+    width: 40%;
+}
+
+.product-buy {
+	border-right: 1px solid #D4D4D4;
+    float: left;
     font-size: 16px;
-    text-shadow: 0 -1px 0 #c65145;
-    border-radius: 4px;
-    position: relative;
-    height: 40px;
-    width: 175px;
-    padding-bottom: 5px;
+    line-height: 55px;
+    text-align: center;
+    width: 59%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.button a:hover{
-	color:white;
-	background-color: $red;	
-}
-
-.action-buttons {
-	border-top: 1px solid $medium_grey;
+.btn-custom {
+	    background-color: #e74c3c !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e74c3c", endColorstr="#e74c3c");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#e74c3c), to(#e74c3c));
+    background-image: -moz-linear-gradient(top, #e74c3c, #e74c3c);
+    background-image: -ms-linear-gradient(top, #e74c3c, #e74c3c);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e74c3c), color-stop(100%, #e74c3c));
+    background-image: -webkit-linear-gradient(top, #e74c3c, #e74c3c);
+    background-image: -o-linear-gradient(top, #e74c3c, #e74c3c);
+    background-image: linear-gradient(#e74c3c, #e74c3c);
+    border-color: #c0392b;
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.00);
+    -webkit-font-smoothing: antialiased;
 }
 
 
@@ -95,27 +118,16 @@ $break-large: 1200px;
 	height: 321px;
 }
 
-.product>img{
-	max-width: 230px;
-}
-
 .product-rating{
 	font-size: 20px;
 	margin-bottom: 25px;
 }
 
-.product-title{
-	font-size: 20px;
-}
 
 .product-desc{
 	font-size: 14px;
 }
 
-.product1-price{
-	font-size: 22px;
-	position:relative;
-}
 
 .product-stock{
 	color: #74DF00;
@@ -168,3 +180,55 @@ $break-large: 1200px;
     border-bottom: 1px solid grey;
     padding: 20px 0;
    }
+
+
+
+/******************************************
+				REVIEW
+******************************************/
+
+
+#add_review input, #add_review textarea {
+	border: 4px solid rgba(0,0,0,0.1);
+	padding: 8px 10px;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	
+	outline: 0;
+}
+
+#add_review textarea {
+	width: 350px;
+}
+
+#add_review input[type="submit"] {
+	cursor: pointer;
+	background: -webkit-linear-gradient(top, #efefef, #ddd);
+	background: -moz-linear-gradient(top, #efefef, #ddd);
+	background: -ms-linear-gradient(top, #efefef, #ddd);
+	background: -o-linear-gradient(top, #efefef, #ddd);
+	background: linear-gradient(top, #efefef, #ddd);
+	color: #333;
+	text-shadow: 0px 1px 1px rgba(255,255,255,1);
+	border: 1px solid #ccc;
+}
+
+#add_review input[type="submit"]:hover {
+	background: -webkit-linear-gradient(top, #eee, #ccc);
+	background: -moz-linear-gradient(top, #eee, #ccc);
+	background: -ms-linear-gradient(top, #eee, #ccc);
+	background: -o-linear-gradient(top, #eee, #ccc);
+	background: linear-gradient(top, #eee, #ccc);
+	border: 1px solid #bbb;
+}
+
+#add_review input[type="submit"]:active {
+	background: -webkit-linear-gradient(top, #ddd, #aaa);
+	background: -moz-linear-gradient(top, #ddd, #aaa);
+	background: -ms-linear-gradient(top, #ddd, #aaa);
+	background: -o-linear-gradient(top, #ddd, #aaa);
+	background: linear-gradient(top, #ddd, #aaa);	
+	border: 1px solid #999;
+}

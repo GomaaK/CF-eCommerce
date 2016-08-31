@@ -1,6 +1,7 @@
 class Product < ActiveRecord::Base
 	has_many :orders
 	has_many :comments
+	validates :name, presence: true
 
 	def lowest_rating_comment
 		coments.rating_asc.first

@@ -1,23 +1,21 @@
-    <div class="container col-md-4 col-xs-12" id="container-<%= product.id %>">
-      <div class="product-header">
-        <h4><%= product.name %></h4>
+    
+<% @products.each do |product| %>
+    <div class="container col-md-3 col-xs-12 product-container" id="container-<%= product.id %>">
+      <div class="product-title">
+        <h4><%=link_to product.name, product %></h4>
       </div>
-      <div class="description">
-        <p><%= product.description %></p>
+      <div class="product-image">
+        <%=link_to image_tag(product.image_url,class: "img-responsive product-img") , product %>
       </div>
-      <div class="color">
-        <p><%= product.color %></p>
-      </div>
-      <div class="image">
-        <%=image_tag(product.image_url,class: "img-responsive product-img") %>
-      </div>
-      <div class="action-buttons">
-        <%= link_to 'Show', product %>
-      </div>
-      <div class="action-buttons">
-        <%= link_to 'Edit', edit_product_path(product) %>
-      </div>
-      <div class="action-buttons">
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
+      <ul class="product-options">
+        <li class="price">€<%= product.price %></li>
+        <li class="product-buy"><a class="btn btn-custom">Add to Cart</a></li>
+      </ul>
+        <div class="action-buttons">
+          <%= link_to "Edit", edit_product_path(product) %>
+        </div>
+        <div class="action-buttons">
+          <%= link_to "Delete", product, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
     </div>
+<% end %>
