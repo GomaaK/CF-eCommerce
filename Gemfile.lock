@@ -1,3 +1,50 @@
+GIT
+  remote: https://github.com/rspec/rspec-core.git
+  revision: d7ff6b3dafca321ce613ea8225ccb1b0d16c5f40
+  branch: master
+  specs:
+    rspec-core (3.6.0.pre)
+      rspec-support (= 3.6.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-expectations.git
+  revision: a271631e9b8e1749be876dbcc65dbd7a6a40d2db
+  branch: master
+  specs:
+    rspec-expectations (3.6.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.6.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-mocks.git
+  revision: 00326f6b8bd48ef8220f7927da5868381ec65770
+  branch: master
+  specs:
+    rspec-mocks (3.6.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.6.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-rails.git
+  revision: e8054a1cd03044f725030fe8315952cf3799a395
+  branch: master
+  specs:
+    rspec-rails (3.6.0.pre)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (= 3.6.0.pre)
+      rspec-expectations (= 3.6.0.pre)
+      rspec-mocks (= 3.6.0.pre)
+      rspec-support (= 3.6.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-support.git
+  revision: e71681f1756d29029ea2bb740010cdc5ca3b258e
+  branch: master
+  specs:
+    rspec-support (3.6.0.pre)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -58,6 +105,7 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.7.0)
     globalid (0.3.6)
@@ -174,6 +222,11 @@ DEPENDENCIES
   pg
   rails (= 4.2.6)
   rails_12factor
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-rails!
+  rspec-support!
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

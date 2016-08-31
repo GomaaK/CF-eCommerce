@@ -35,11 +35,16 @@ gem 'will_paginate'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+%w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+  gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'master'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+
 end
 
 group :development do
@@ -50,9 +55,9 @@ group :development do
   gem 'spring'
 end
 
-#group :production do
+group :production do
   gem 'pg'
   gem 'rails_12factor'
-#end
+end
 
 
