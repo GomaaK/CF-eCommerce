@@ -10,10 +10,12 @@
         <li class="price">€<%= product.price %></li>
         <li class="product-buy"><a class="btn btn-custom">Add to Cart</a></li>
       </ul>
+      <% if signed_in? && current_user.admin? %>
         <div class="action-buttons">
           <%= link_to "Edit", edit_product_path(product) %>
         </div>
         <div class="action-buttons">
           <%= link_to "Delete", product, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
+      <% end %>
     </div>
