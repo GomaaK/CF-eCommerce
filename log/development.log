@@ -45425,3 +45425,38 @@ Started GET "/assets/images/star-off.png" for 127.0.0.1 at 2016-08-31 11:09:57 +
 
 
 Started GET "/assets/images/star-on.png" for 127.0.0.1 at 2016-08-31 11:09:57 +0100
+
+
+Started GET "/products" for 127.0.0.1 at 2016-08-31 11:12:46 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered products/_product.html.erb (24.0ms)
+  Rendered products/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 83ms (Views: 76.4ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2016-08-31 11:12:48 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"geKCA5FzPoZw/5LupCq1Gz6W+cKgDXXw5LL+oBikW/nE0VJWA2d+/2W2M8rPYhqc8neDJdN/dmW3g4YobBMkEA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-31 11:12:48 +0100
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "products" LIMIT 3) subquery_for_count
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 3[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-08-31 11:12:49 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/_product.html.erb (12.0ms)
+  Rendered products/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.3ms)
