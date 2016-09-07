@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   rescue_from CanCan::AccessDenied do |exception |
-  	redirect_to main_app.users_path, :alert => "Tried to open #{exception.action} page. \
+  	redirect_to main_app.root_path, :alert => "Tried to open #{exception.action} page. \
   	#{exception.message}"
   end
 end
