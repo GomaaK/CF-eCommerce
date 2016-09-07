@@ -41,7 +41,7 @@
         </ul>
 
         <div class="col-sm-3 col-md-3">
-        <%= form_tag("/products", method: "get", role: "search", class: "navbar-form") do %>
+        <%= form_tag(products_path, method: "get", role: "search", class: "navbar-form") do %>
         <div class="input-group">
             <%= text_field_tag(:q,nil, class: "search form-control",placeholder: 'Enter search term...') %>
             <div class="input-group-btn">
