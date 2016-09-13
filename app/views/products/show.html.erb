@@ -46,24 +46,13 @@
 			<div class="col-md-12 product-info">
 					<ul id="myTab" class="nav nav-tabs nav_tabs">
 						
-						<li class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
+						<li class="active"><a href="#service-one" data-toggle="tab">COMMENTS</a></li>
 						<li><a href="#service-two" data-toggle="tab">PRODUCT INFO</a></li>
-						<li><a href="#service-three" data-toggle="tab">COMMENTS</a></li>
+						<li><a href="#service-three" data-toggle="tab">DESCRIPTION</a></li>
 						
 					</ul>
 				<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade in active" id="service-one">
-						 
-							<section class="container product-info">
-								<p>Will need a new db field</p>
-							</section>									  
-						</div>
-					<div class="tab-pane fade" id="service-two">	
-						<section class="container">
-							<h3> Product Info </h3>					
-						</section>		
-					</div>
-					<div class="tab-pane fade" id="service-three">
 					<%= render 'new_comment' %>	
 						<section class="container">
 							<%= render 'comments' %>
@@ -71,6 +60,18 @@
 						</section>
 															
 					</div>
+						<div class="tab-pane fade" id="service-two">
+						 
+							<section class="container product-info">
+								<p>Will need a new db field</p>
+							</section>									  
+						</div>
+					<div class="tab-pane fade" id="service-three">	
+						<section class="container">
+							<h3> Product Info </h3>					
+						</section>		
+					</div>
+					
 				</div>
 				<hr>
 			</div>
