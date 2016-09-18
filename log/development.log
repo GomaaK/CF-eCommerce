@@ -52703,3 +52703,1282 @@ Processing by ProductsController#index as HTML
   Rendered products/_product.html.erb (7.4ms)
   Rendered products/index.html.erb within layouts/application (9.9ms)
 Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-09-18 22:03:54 +0200
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.html.erb (8.4ms)
+  Rendered products/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2016-09-18 22:03:55 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered products/_new_comment.html.erb (2.5ms)
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 5 OFFSET 0  [["product_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered products/_comments.html.erb (8.0ms)
+  Rendered products/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 78ms (Views: 75.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/images/star-off.png" for 127.0.0.1 at 2016-09-18 22:03:55 +0200
+
+
+Started GET "/assets/images/star-on.png" for 127.0.0.1 at 2016-09-18 22:03:55 +0200
+
+
+Started GET "/products/1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_new_comment.html.erb (2.4ms)
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m  [["product_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered products/_comments.html.erb (9.8ms)
+  Rendered products/show.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/comments.self-43e8c41e22e75d03da9a7559c9bbb7e3298fcb4f2d84c64953aa083ebfb230ee.css?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/products.self-7a590625ce85abe47576747ad8f0b4116691b0bc62e5dfcb7966631f29317c8d.css?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/scaffolds.self-c8b020d5cf153245520b31a1ac0707a2ef719f2789ba056d068e41cdf763d950.css?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/static_pages.self-7cdd6de83901bd8ae264a942231f75b5817e2b578c105c8fb960efb6c114f5f4.css?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/application.self-f054dee5b270fc16e3b2c9b3c6738526060c8a7630602507c7d75dc13d270b3d.css?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/site.self-45e7ed3709aa3dac97035f03a0d1429166e5ae208d0bc20a2d154ee7302001a7.js?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/application.self-579c3ddd4686ba2575374751349a3db64dd789cc395a90db62ae01e5c9ac1608.js?body=1" for 127.0.0.1 at 2016-09-18 22:04:16 +0200
+
+
+Started GET "/assets/bmx-aee59de2e7dd0dae00dcc463e8a0877be7df807dc34e7655198b33ec9f0646d5.jpg" for 127.0.0.1 at 2016-09-18 22:04:20 +0200
+
+
+Started GET "/assets/images/star-off.png" for 127.0.0.1 at 2016-09-18 22:04:38 +0200
+
+
+Started GET "/assets/images/star-on.png" for 127.0.0.1 at 2016-09-18 22:04:38 +0200
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-18 22:09:38 +0200
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "products" LIMIT 3) subquery_for_count
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 3[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (21.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 603ms (Views: 602.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-09-18 22:09:40 +0200
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered products/_product.html.erb (23.2ms)
+  Rendered products/index.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 101ms (Views: 100.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2016-09-18 22:09:41 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_new_comment.html.erb (4.8ms)
+  [1m[35mComment Load (0.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m  [["product_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered products/_comments.html.erb (11.3ms)
+  Rendered products/show.html.erb within layouts/application (56.8ms)
+Completed 200 OK in 114ms (Views: 109.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products/bmx.jpg" for 127.0.0.1 at 2016-09-18 22:09:43 +0200
+Processing by ProductsController#show as JPEG
+  Parameters: {"id"=>"bmx"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=bmx):
+  app/controllers/products_controller.rb:75:in `set_product'
+
+
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.9ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (72.2ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (161.6ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2016-09-18 22:09:43 +0200
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/_form.html.erb (5.0ms)
+  Rendered products/edit.html.erb within layouts/application (23.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 109ms (Views: 107.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-18 22:09:47 +0200
+Processing by StaticPagesController#landing_page as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "products" LIMIT 3) subquery_for_count[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" LIMIT 3
+  Rendered static_pages/landing_page.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-09-18 22:09:51 +0200
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.html.erb (8.0ms)
+  Rendered products/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2016-09-18 22:09:53 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered products/_new_comment.html.erb (2.9ms)
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 5 OFFSET 0  [["product_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered products/_comments.html.erb (6.9ms)
+  Rendered products/show.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-09-18 22:10:38 +0200
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered products/_product.html.erb (10.7ms)
+  Rendered products/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-09-18 22:10:40 +0200
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered products/_product.html.erb (11.0ms)
+  Rendered products/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2016-09-18 22:10:42 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_new_comment.html.erb (2.1ms)
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m  [["product_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered products/_comments.html.erb (11.5ms)
+  Rendered products/show.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 65ms (Views: 61.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2016-09-18 22:11:40 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (1.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered products/_new_comment.html.erb (2.7ms)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 5 OFFSET 0  [["product_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered products/_comments.html.erb (8.3ms)
+  Rendered products/show.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 56ms (Views: 52.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/images/star-off.png" for 127.0.0.1 at 2016-09-18 22:11:41 +0200
+
+
+Started GET "/assets/images/star-on.png" for 127.0.0.1 at 2016-09-18 22:11:41 +0200
+
+
+Started GET "/products/1" for 127.0.0.1 at 2016-09-18 22:12:28 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (1.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_new_comment.html.erb (2.7ms)
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m  [["product_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered products/_comments.html.erb (8.1ms)
+  Rendered products/show.html.erb within layouts/application (61.4ms)
+Completed 200 OK in 415ms (Views: 412.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/comments.self-43e8c41e22e75d03da9a7559c9bbb7e3298fcb4f2d84c64953aa083ebfb230ee.css?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/scaffolds.self-c8b020d5cf153245520b31a1ac0707a2ef719f2789ba056d068e41cdf763d950.css?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/products.self-7a590625ce85abe47576747ad8f0b4116691b0bc62e5dfcb7966631f29317c8d.css?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/static_pages.self-7cdd6de83901bd8ae264a942231f75b5817e2b578c105c8fb960efb6c114f5f4.css?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/application.self-f054dee5b270fc16e3b2c9b3c6738526060c8a7630602507c7d75dc13d270b3d.css?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/site.self-45e7ed3709aa3dac97035f03a0d1429166e5ae208d0bc20a2d154ee7302001a7.js?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/application.self-579c3ddd4686ba2575374751349a3db64dd789cc395a90db62ae01e5c9ac1608.js?body=1" for 127.0.0.1 at 2016-09-18 22:12:29 +0200
+
+
+Started GET "/assets/bmx-aee59de2e7dd0dae00dcc463e8a0877be7df807dc34e7655198b33ec9f0646d5.jpg" for 127.0.0.1 at 2016-09-18 22:12:31 +0200
+
+
+Started GET "/assets/images/star-off.png" for 127.0.0.1 at 2016-09-18 22:12:37 +0200
+
+
+Started GET "/assets/images/star-on.png" for 127.0.0.1 at 2016-09-18 22:12:37 +0200
+
+
+Started GET "/products/1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered products/_new_comment.html.erb (2.7ms)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 5 OFFSET 0  [["product_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered products/_comments.html.erb (10.3ms)
+  Rendered products/show.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 60ms (Views: 56.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/comments.self-43e8c41e22e75d03da9a7559c9bbb7e3298fcb4f2d84c64953aa083ebfb230ee.css?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/scaffolds.self-c8b020d5cf153245520b31a1ac0707a2ef719f2789ba056d068e41cdf763d950.css?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/static_pages.self-7cdd6de83901bd8ae264a942231f75b5817e2b578c105c8fb960efb6c114f5f4.css?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/products.self-7a590625ce85abe47576747ad8f0b4116691b0bc62e5dfcb7966631f29317c8d.css?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/application.self-f054dee5b270fc16e3b2c9b3c6738526060c8a7630602507c7d75dc13d270b3d.css?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/site.self-45e7ed3709aa3dac97035f03a0d1429166e5ae208d0bc20a2d154ee7302001a7.js?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/application.self-579c3ddd4686ba2575374751349a3db64dd789cc395a90db62ae01e5c9ac1608.js?body=1" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/bmx-aee59de2e7dd0dae00dcc463e8a0877be7df807dc34e7655198b33ec9f0646d5.jpg" for 127.0.0.1 at 2016-09-18 22:13:13 +0200
+
+
+Started GET "/assets/images/star-off.png" for 127.0.0.1 at 2016-09-18 22:13:14 +0200
+
+
+Started GET "/assets/images/star-on.png" for 127.0.0.1 at 2016-09-18 22:13:14 +0200
+
+
+Started GET "/products/assets/bmx.jpg" for 127.0.0.1 at 2016-09-18 22:13:22 +0200
+
+ActionController::RoutingError (No route matches [GET] "/products/assets/bmx.jpg"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tiago/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/tiago/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/tiago/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.9ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (108.2ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.2ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (64.0ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (144.4ms)
+
+
+Started GET "/products/assets/bmx.jpg" for 127.0.0.1 at 2016-09-18 22:13:26 +0200
+
+ActionController::RoutingError (No route matches [GET] "/products/assets/bmx.jpg"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tiago/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/tiago/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/tiago/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (110.9ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (2.0ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (147.4ms)
+
+
+Started GET "/products/assets/bmx.jpg" for 127.0.0.1 at 2016-09-18 22:13:33 +0200
+
+ActionController::RoutingError (No route matches [GET] "/products/assets/bmx.jpg"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tiago/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/tiago/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/tiago/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (101.3ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.0ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (135.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-09-18 22:13:48 +0200
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered products/_product.html.erb (32.1ms)
+  Rendered products/index.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 146ms (Views: 144.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2016-09-18 22:13:49 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_new_comment.html.erb (2.4ms)
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m  [["product_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered products/_comments.html.erb (7.6ms)
+  Rendered products/show.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 61ms (Views: 58.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2016-09-18 22:14:01 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (1.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered products/_new_comment.html.erb (4.4ms)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 5 OFFSET 0  [["product_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered products/_comments.html.erb (9.9ms)
+  Rendered products/show.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 87ms (Views: 82.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 127.0.0.1 at 2016-09-18 22:14:01 +0200
+
+
+Started GET "/assets/comments.self-43e8c41e22e75d03da9a7559c9bbb7e3298fcb4f2d84c64953aa083ebfb230ee.css?body=1" for 127.0.0.1 at 2016-09-18 22:14:01 +0200
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/scaffolds.self-c8b020d5cf153245520b31a1ac0707a2ef719f2789ba056d068e41cdf763d950.css?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/static_pages.self-7cdd6de83901bd8ae264a942231f75b5817e2b578c105c8fb960efb6c114f5f4.css?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/products.self-7a590625ce85abe47576747ad8f0b4116691b0bc62e5dfcb7966631f29317c8d.css?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/application.self-f054dee5b270fc16e3b2c9b3c6738526060c8a7630602507c7d75dc13d270b3d.css?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/site.self-45e7ed3709aa3dac97035f03a0d1429166e5ae208d0bc20a2d154ee7302001a7.js?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/application.self-579c3ddd4686ba2575374751349a3db64dd789cc395a90db62ae01e5c9ac1608.js?body=1" for 127.0.0.1 at 2016-09-18 22:14:02 +0200
+
+
+Started GET "/assets/bmx-aee59de2e7dd0dae00dcc463e8a0877be7df807dc34e7655198b33ec9f0646d5.jpg" for 127.0.0.1 at 2016-09-18 22:14:04 +0200
+
+
+Started GET "/assets/images/star-off.png" for 127.0.0.1 at 2016-09-18 22:14:05 +0200
+
+
+Started GET "/assets/images/star-on.png" for 127.0.0.1 at 2016-09-18 22:14:05 +0200
+
+
+Started GET "/products/bmx.jpg" for 127.0.0.1 at 2016-09-18 22:18:22 +0200
+Processing by ProductsController#show as JPEG
+  Parameters: {"id"=>"bmx"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=bmx):
+  app/controllers/products_controller.rb:75:in `set_product'
+
+
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.5ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.7ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.1ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (137.3ms)
+
+
+Started GET "/products/bmx.jpg" for 127.0.0.1 at 2016-09-18 22:18:42 +0200
+Processing by ProductsController#show as JPEG
+  Parameters: {"id"=>"bmx"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=bmx):
+  app/controllers/products_controller.rb:75:in `set_product'
+
+
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.3ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (76.3ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (153.8ms)
+
+
+Started GET "/products/bmx.jpg" for 127.0.0.1 at 2016-09-18 22:21:49 +0200
+Processing by ProductsController#show as JPEG
+  Parameters: {"id"=>"bmx"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=bmx):
+  app/controllers/products_controller.rb:75:in `set_product'
+
+
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.3ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (66.7ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/tiago/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (144.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-09-18 22:23:14 +0200
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.html.erb (99.1ms)
+  Rendered products/index.html.erb within layouts/application (111.2ms)
+Completed 200 OK in 755ms (Views: 753.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2016-09-18 22:23:23 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered shared/_stripe_checkout_button.html.erb (1.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered products/_new_comment.html.erb (4.3ms)
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 5 OFFSET 0  [["product_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/_comments.html.erb (3.3ms)
+  Rendered products/show.html.erb within layouts/application (92.1ms)
+Completed 200 OK in 210ms (Views: 206.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products/2/edit" for 127.0.0.1 at 2016-09-18 22:23:24 +0200
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered products/_form.html.erb (5.3ms)
+  Rendered products/edit.html.erb within layouts/application (23.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 133ms (Views: 131.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/products/2" for 127.0.0.1 at 2016-09-18 22:23:34 +0200
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y28Dl1LfmjxNQ8c2cqZ1uyU9BOpSWfqKlwLuCzo+y+z+ioiTKctuvjdMAz4SxWofsrcPDEr4R2hyDFiXqYhGAQ==", "product"=>{"name"=>"Product2", "description"=>"My Second Product", "image_url"=>"https://i5.walmartimages.com/asr/207609ec-6439-4a1b-9c98-81ad52d29f1e_1.3d2902a4b4a78d6cd9b0f851cc2d0ad2.jpeg", "color"=>"", "price"=>"247.0"}, "commit"=>"Update Product", "id"=>"2"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (105.9ms)[0m  UPDATE "products" SET "image_url" = ?, "updated_at" = ? WHERE "products"."id" = ?  [["image_url", "https://i5.walmartimages.com/asr/207609ec-6439-4a1b-9c98-81ad52d29f1e_1.3d2902a4b4a78d6cd9b0f851cc2d0ad2.jpeg"], ["updated_at", "2016-09-18 20:23:34.679799"], ["id", 2]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 115ms (ActiveRecord: 109.4ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2016-09-18 22:23:34 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered products/_new_comment.html.erb (3.0ms)
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 5 OFFSET 0  [["product_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/_comments.html.erb (2.3ms)
+  Rendered products/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/images/star-off.png" for 127.0.0.1 at 2016-09-18 22:23:35 +0200
+
+
+Started GET "/assets/images/star-on.png" for 127.0.0.1 at 2016-09-18 22:23:35 +0200
+
+
+Started GET "/products" for 127.0.0.1 at 2016-09-18 22:23:36 +0200
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.html.erb (6.7ms)
+  Rendered products/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-09-18 22:25:12 +0200
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (24.9ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.html.erb (76.7ms)
+  Rendered products/index.html.erb within layouts/application (121.6ms)
+Completed 200 OK in 1046ms (Views: 1020.4ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/assets/comments.self-43e8c41e22e75d03da9a7559c9bbb7e3298fcb4f2d84c64953aa083ebfb230ee.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/products.self-334c4ad537d42087efebf7d5eb61ac12add270bbd77f7c3c1af06111cd9793c4.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/static_pages.self-7cdd6de83901bd8ae264a942231f75b5817e2b578c105c8fb960efb6c114f5f4.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/scaffolds.self-c8b020d5cf153245520b31a1ac0707a2ef719f2789ba056d068e41cdf763d950.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/application.self-f054dee5b270fc16e3b2c9b3c6738526060c8a7630602507c7d75dc13d270b3d.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/site.self-45e7ed3709aa3dac97035f03a0d1429166e5ae208d0bc20a2d154ee7302001a7.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/application.self-579c3ddd4686ba2575374751349a3db64dd789cc395a90db62ae01e5c9ac1608.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/bmx-aee59de2e7dd0dae00dcc463e8a0877be7df807dc34e7655198b33ec9f0646d5.jpg" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/bike-12251b3b72cfc4acbcba106279bf937fa982dddc25c3b38b46a1896b9bc97704.jpg" for 127.0.0.1 at 2016-09-18 22:25:13 +0200
+
+
+Started GET "/assets/bike-12251b3b72cfc4acbcba106279bf937fa982dddc25c3b38b46a1896b9bc97704.jpg" for 127.0.0.1 at 2016-09-18 22:25:14 +0200
+
+
+Started GET "/assets/bmx-aee59de2e7dd0dae00dcc463e8a0877be7df807dc34e7655198b33ec9f0646d5.jpg" for 127.0.0.1 at 2016-09-18 22:25:14 +0200
+
+
+Started GET "/assets/bike2-71430ca109a44f01cd1c6c7d67cf92511e2d244dcae47dd82e1e1ad2df5407db.jpg" for 127.0.0.1 at 2016-09-18 22:25:14 +0200
+
+
+Started GET "/products" for 127.0.0.1 at 2016-09-18 22:25:21 +0200
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.html.erb (13.8ms)
+  Rendered products/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 335ms (Views: 333.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/comments.self-43e8c41e22e75d03da9a7559c9bbb7e3298fcb4f2d84c64953aa083ebfb230ee.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/static_pages.self-7cdd6de83901bd8ae264a942231f75b5817e2b578c105c8fb960efb6c114f5f4.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/scaffolds.self-c8b020d5cf153245520b31a1ac0707a2ef719f2789ba056d068e41cdf763d950.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/products.self-b4bf5d94a542d8cc283ba7ec9895c70aabe7384a30d0999ea68ddd4bb913a415.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/application.self-f054dee5b270fc16e3b2c9b3c6738526060c8a7630602507c7d75dc13d270b3d.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/site.self-45e7ed3709aa3dac97035f03a0d1429166e5ae208d0bc20a2d154ee7302001a7.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/application.self-579c3ddd4686ba2575374751349a3db64dd789cc395a90db62ae01e5c9ac1608.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/bmx-aee59de2e7dd0dae00dcc463e8a0877be7df807dc34e7655198b33ec9f0646d5.jpg" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/bike-12251b3b72cfc4acbcba106279bf937fa982dddc25c3b38b46a1896b9bc97704.jpg" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/assets/bike2-71430ca109a44f01cd1c6c7d67cf92511e2d244dcae47dd82e1e1ad2df5407db.jpg" for 127.0.0.1 at 2016-09-18 22:25:22 +0200
+
+
+Started GET "/products" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.html.erb (8.5ms)
+  Rendered products/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 278ms (Views: 276.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/comments.self-43e8c41e22e75d03da9a7559c9bbb7e3298fcb4f2d84c64953aa083ebfb230ee.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/scaffolds.self-c8b020d5cf153245520b31a1ac0707a2ef719f2789ba056d068e41cdf763d950.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/static_pages.self-7cdd6de83901bd8ae264a942231f75b5817e2b578c105c8fb960efb6c114f5f4.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/products.self-e6fee94bc746e0d4f4e93a20b047f1521db034a6d73aa325c6392599847dc46e.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/application.self-f054dee5b270fc16e3b2c9b3c6738526060c8a7630602507c7d75dc13d270b3d.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/site.self-45e7ed3709aa3dac97035f03a0d1429166e5ae208d0bc20a2d154ee7302001a7.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/application.self-579c3ddd4686ba2575374751349a3db64dd789cc395a90db62ae01e5c9ac1608.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:28 +0200
+
+
+Started GET "/assets/bmx-aee59de2e7dd0dae00dcc463e8a0877be7df807dc34e7655198b33ec9f0646d5.jpg" for 127.0.0.1 at 2016-09-18 22:25:29 +0200
+
+
+Started GET "/assets/bike-12251b3b72cfc4acbcba106279bf937fa982dddc25c3b38b46a1896b9bc97704.jpg" for 127.0.0.1 at 2016-09-18 22:25:29 +0200
+
+
+Started GET "/assets/bike2-71430ca109a44f01cd1c6c7d67cf92511e2d244dcae47dd82e1e1ad2df5407db.jpg" for 127.0.0.1 at 2016-09-18 22:25:29 +0200
+
+
+Started GET "/products" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (70.6ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.html.erb (8.1ms)
+  Rendered products/index.html.erb within layouts/application (81.5ms)
+Completed 200 OK in 354ms (Views: 282.9ms | ActiveRecord: 70.7ms)
+
+
+Started GET "/assets/products.self-9a48252a2e7174be50d8c45bcc2c629c65011435039077166bae925144590e00.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/comments.self-43e8c41e22e75d03da9a7559c9bbb7e3298fcb4f2d84c64953aa083ebfb230ee.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/static_pages.self-7cdd6de83901bd8ae264a942231f75b5817e2b578c105c8fb960efb6c114f5f4.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/scaffolds.self-c8b020d5cf153245520b31a1ac0707a2ef719f2789ba056d068e41cdf763d950.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/application.self-f054dee5b270fc16e3b2c9b3c6738526060c8a7630602507c7d75dc13d270b3d.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/site.self-45e7ed3709aa3dac97035f03a0d1429166e5ae208d0bc20a2d154ee7302001a7.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/application.self-579c3ddd4686ba2575374751349a3db64dd789cc395a90db62ae01e5c9ac1608.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:47 +0200
+
+
+Started GET "/assets/bmx-aee59de2e7dd0dae00dcc463e8a0877be7df807dc34e7655198b33ec9f0646d5.jpg" for 127.0.0.1 at 2016-09-18 22:25:50 +0200
+
+
+Started GET "/assets/bike-12251b3b72cfc4acbcba106279bf937fa982dddc25c3b38b46a1896b9bc97704.jpg" for 127.0.0.1 at 2016-09-18 22:25:50 +0200
+
+
+Started GET "/assets/bike2-71430ca109a44f01cd1c6c7d67cf92511e2d244dcae47dd82e1e1ad2df5407db.jpg" for 127.0.0.1 at 2016-09-18 22:25:50 +0200
+
+
+Started GET "/products" for 127.0.0.1 at 2016-09-18 22:25:58 +0200
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (25.1ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.html.erb (10.9ms)
+  Rendered products/index.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 475ms (Views: 448.5ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/assets/products.self-2bb2c937f3df463cee45f28c4b7551ca847100ff9844c01cf5e0b107600f8029.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/comments.self-43e8c41e22e75d03da9a7559c9bbb7e3298fcb4f2d84c64953aa083ebfb230ee.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/static_pages.self-7cdd6de83901bd8ae264a942231f75b5817e2b578c105c8fb960efb6c114f5f4.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/scaffolds.self-c8b020d5cf153245520b31a1ac0707a2ef719f2789ba056d068e41cdf763d950.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/application.self-f054dee5b270fc16e3b2c9b3c6738526060c8a7630602507c7d75dc13d270b3d.css?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/site.self-45e7ed3709aa3dac97035f03a0d1429166e5ae208d0bc20a2d154ee7302001a7.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/application.self-579c3ddd4686ba2575374751349a3db64dd789cc395a90db62ae01e5c9ac1608.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-18 22:25:59 +0200
+
+
+Started GET "/products" for 127.0.0.1 at 2016-09-18 22:26:11 +0200
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.html.erb (6.8ms)
+  Rendered products/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-09-18 22:26:12 +0200
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.html.erb (7.5ms)
+  Rendered products/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-09-18 22:26:35 +0200
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.html.erb (7.9ms)
+  Rendered products/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 51ms (Views: 49.4ms | ActiveRecord: 0.3ms)
