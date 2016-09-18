@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   #root 'products#index'
   post 'payments/create'
+  get 'payments/success'
   post 'static_pages/thank_you'
   resources :orders, only: [:index, :show, :create, :destroy]
 
