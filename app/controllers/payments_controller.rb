@@ -12,11 +12,16 @@ class PaymentsController < ApplicationController
 	      :source => token,
 	      :description => params[:stripeEmail]
 	    )
-	   if charge.paid
+	    if @current_user == nil
+	    	flash[:alert] = "You need to be sign in to create an order. Your credit card was not charged."
+      		redirect_to product_path(@product)
+	    
+	   elsif charge.paid
 	   		Order.create(
 	   			:product_id => @product_id,
           		:user_id => @current_user.id,
           		:total => @product.price)
+	   		redirect_to payments_success_path
 	   end
 	  rescue Stripe::CardError => e
 	     # The card has been declined
@@ -25,6 +30,6 @@ class PaymentsController < ApplicationController
       	flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
       end
 
-    redirect_to payments_success_path
+    
 	end
 end
