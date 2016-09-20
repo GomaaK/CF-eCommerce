@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
       # return our filtered list here
       @products = Product.where("name LIKE ?","%#{search_term}%")
     else
+
       @products = Product.all
   end
   end
