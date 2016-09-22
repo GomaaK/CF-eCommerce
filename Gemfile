@@ -33,6 +33,8 @@ gem 'stripe'
 
 gem 'brakeman'
 
+gem 'dalli'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -1,0 +1,128 @@
+o: ActiveSupport::Cache::Entry:@valueI"D      <div class="container col-md-3 col-xs-12 product-container" id="container-1">
+      <div class="product-title">
+        <h4><a href="/products/1">Product1</a></h4>
+      </div>
+      <div class="product-image">
+        <a href="/products/1"><img class="img-responsive product-img" src="/assets/bmx-aee59de2e7dd0dae00dcc463e8a0877be7df807dc34e7655198b33ec9f0646d5.jpg" alt="Bmx" /></a>
+      </div>
+      <ul class="product-options">
+        <li class="price">€1.0</li>
+        <li class="product-buy"><a class="btn btn-custom">Add to Cart</a></li>
+      </ul>
+        <div class="action-buttons">
+          <a href="/products/1/edit">Edit</a>
+        </div>
+        <div class="action-buttons">
+          <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/1">Delete</a>
+        </div>
+    </div>
+    <div class="container col-md-3 col-xs-12 product-container" id="container-2">
+      <div class="product-title">
+        <h4><a href="/products/2">Product2</a></h4>
+      </div>
+      <div class="product-image">
+        <a href="/products/2"><img class="img-responsive product-img" src="https://i5.walmartimages.com/asr/207609ec-6439-4a1b-9c98-81ad52d29f1e_1.3d2902a4b4a78d6cd9b0f851cc2d0ad2.jpeg" alt="207609ec 6439 4a1b 9c98 81ad52d29f1e 1.3d2902a4b4a78d6cd9b0f851cc2d0ad2" /></a>
+      </div>
+      <ul class="product-options">
+        <li class="price">€247.0</li>
+        <li class="product-buy"><a class="btn btn-custom">Add to Cart</a></li>
+      </ul>
+        <div class="action-buttons">
+          <a href="/products/2/edit">Edit</a>
+        </div>
+        <div class="action-buttons">
+          <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/2">Delete</a>
+        </div>
+    </div>
+    <div class="container col-md-3 col-xs-12 product-container" id="container-3">
+      <div class="product-title">
+        <h4><a href="/products/3">Product3</a></h4>
+      </div>
+      <div class="product-image">
+        <a href="/products/3"><img class="img-responsive product-img" src="/assets/bike-12251b3b72cfc4acbcba106279bf937fa982dddc25c3b38b46a1896b9bc97704.jpg" alt="Bike" /></a>
+      </div>
+      <ul class="product-options">
+        <li class="price">€120.0</li>
+        <li class="product-buy"><a class="btn btn-custom">Add to Cart</a></li>
+      </ul>
+        <div class="action-buttons">
+          <a href="/products/3/edit">Edit</a>
+        </div>
+        <div class="action-buttons">
+          <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/3">Delete</a>
+        </div>
+    </div>
+    <div class="container col-md-3 col-xs-12 product-container" id="container-4">
+      <div class="product-title">
+        <h4><a href="/products/4">Product4</a></h4>
+      </div>
+      <div class="product-image">
+        <a href="/products/4"><img class="img-responsive product-img" src="/assets/bike2-71430ca109a44f01cd1c6c7d67cf92511e2d244dcae47dd82e1e1ad2df5407db.jpg" alt="Bike2" /></a>
+      </div>
+      <ul class="product-options">
+        <li class="price">€</li>
+        <li class="product-buy"><a class="btn btn-custom">Add to Cart</a></li>
+      </ul>
+        <div class="action-buttons">
+          <a href="/products/4/edit">Edit</a>
+        </div>
+        <div class="action-buttons">
+          <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/4">Delete</a>
+        </div>
+    </div>
+    <div class="container col-md-3 col-xs-12 product-container" id="container-5">
+      <div class="product-title">
+        <h4><a href="/products/5">console-generated product</a></h4>
+      </div>
+      <div class="product-image">
+        <a href="/products/5"><img class="img-responsive product-img" src="" /></a>
+      </div>
+      <ul class="product-options">
+        <li class="price">€</li>
+        <li class="product-buy"><a class="btn btn-custom">Add to Cart</a></li>
+      </ul>
+        <div class="action-buttons">
+          <a href="/products/5/edit">Edit</a>
+        </div>
+        <div class="action-buttons">
+          <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/5">Delete</a>
+        </div>
+    </div>
+    <div class="container col-md-3 col-xs-12 product-container" id="container-6">
+      <div class="product-title">
+        <h4><a href="/products/6">seed-generated product</a></h4>
+      </div>
+      <div class="product-image">
+        <a href="/products/6"><img class="img-responsive product-img" src="" /></a>
+      </div>
+      <ul class="product-options">
+        <li class="price">€</li>
+        <li class="product-buy"><a class="btn btn-custom">Add to Cart</a></li>
+      </ul>
+        <div class="action-buttons">
+          <a href="/products/6/edit">Edit</a>
+        </div>
+        <div class="action-buttons">
+          <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/6">Delete</a>
+        </div>
+    </div>
+    <div class="container col-md-3 col-xs-12 product-container" id="container-7">
+      <div class="product-title">
+        <h4><a href="/products/7">test</a></h4>
+      </div>
+      <div class="product-image">
+        <a href="/products/7"><img class="img-responsive product-img" src="" /></a>
+      </div>
+      <ul class="product-options">
+        <li class="price">€</li>
+        <li class="product-buy"><a class="btn btn-custom">Add to Cart</a></li>
+      </ul>
+        <div class="action-buttons">
+          <a href="/products/7/edit">Edit</a>
+        </div>
+        <div class="action-buttons">
+          <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/7">Delete</a>
+        </div>
+    </div>
+
+:ET:@created_atf1474579251.289104:@expires_in0

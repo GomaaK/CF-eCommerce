@@ -1,0 +1,15 @@
+o: ActiveSupport::Cache::Entry:@valueI"/							<img class="img-zoom" data_zoom_image="bmx.jpg" src="/assets/bmx-aee59de2e7dd0dae00dcc463e8a0877be7df807dc34e7655198b33ec9f0646d5.jpg" alt="Bmx" />
+						</center>
+					</div>
+				</div>					
+				<div class="col-md-3">
+					<div class="product-title"> Product1</div>
+					</br>
+					<div class="product-desc">My First Product</div>
+					<div class="product-rating">
+					</br>
+					<p>Average Rating: <div class="rated" id="average-rating" data-score="3.72972972972973"></div> </p>		
+					</div>
+					<hr>
+					<div class="product1-price">€1.0</div>
+:ET:@created_atf1474578823.049057:@expires_in0

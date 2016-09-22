@@ -13,6 +13,7 @@
 				<div class="col-md-6">
 					<div class="product col-md-6 service-image">
 						<center>
+							<% cache @product do %>
 							<%= image_tag(@product.image_url, class: "img-zoom",data_zoom_image: @product.image_url) %>
 						</center>
 					</div>
@@ -27,6 +28,7 @@
 					</div>
 					<hr>
 					<div class="product1-price">€<%= @product.price %></div>
+					<% end %>
 					<div class="product-stock">In Stock</div>
 					<hr>
 						<%= form_tag "/payments/create" do %>

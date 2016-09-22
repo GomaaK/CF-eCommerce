@@ -1,0 +1,19 @@
+o: ActiveSupport::Cache::Entry:@valueI"C    <div class="container col-md-3 col-xs-12 product-container" id="container-1">
+      <div class="product-title">
+        <h4><a href="/products/1">Product1</a></h4>
+      </div>
+      <div class="product-image">
+        <a href="/products/1"><img class="img-responsive product-img" src="/assets/bmx-aee59de2e7dd0dae00dcc463e8a0877be7df807dc34e7655198b33ec9f0646d5.jpg" alt="Bmx" /></a>
+      </div>
+      <ul class="product-options">
+        <li class="price">€1.0</li>
+        <li class="product-buy"><a class="btn btn-custom">Add to Cart</a></li>
+      </ul>
+        <div class="action-buttons">
+          <a href="/products/1/edit">Edit</a>
+        </div>
+        <div class="action-buttons">
+          <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/1">Delete</a>
+        </div>
+    </div>
+:ET:@created_atf1474578986.690322:@expires_in0

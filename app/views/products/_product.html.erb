@@ -1,4 +1,4 @@
-
+<% cache product do %>
     <div class="container col-md-3 col-xs-12 product-container" id="container-<%= product.id %>">
       <div class="product-title">
         <h4><%=link_to product.name, product %></h4>
@@ -19,3 +19,4 @@
         </div>
       <% end %>
     </div>
+<% end %>

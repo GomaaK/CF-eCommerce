@@ -1,0 +1,19 @@
+o: ActiveSupport::Cache::Entry:@valueI"ô    <div class="container col-md-3 col-xs-12 product-container" id="container-6">
+      <div class="product-title">
+        <h4><a href="/products/6">seed-generated product</a></h4>
+      </div>
+      <div class="product-image">
+        <a href="/products/6"><img class="img-responsive product-img" src="" /></a>
+      </div>
+      <ul class="product-options">
+        <li class="price">â‚¬</li>
+        <li class="product-buy"><a class="btn btn-custom">Add to Cart</a></li>
+      </ul>
+        <div class="action-buttons">
+          <a href="/products/6/edit">Edit</a>
+        </div>
+        <div class="action-buttons">
+          <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/6">Delete</a>
+        </div>
+    </div>
+:ET:@created_atf1474579051.4490979:@expires_in0
