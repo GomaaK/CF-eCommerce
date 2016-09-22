@@ -23,7 +23,7 @@
 					<div class="product-desc"><%= @product.description %></div>
 					<div class="product-rating">
 					</br>
-					<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>		
+					<p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>		
 					</div>
 					<hr>
 					<div class="product1-price">€<%= @product.price %></div>
@@ -48,7 +48,7 @@
 				<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade in active" id="service-one">
 					<%= render 'new_comment' %>	
-						<section class="container">
+						<section class="container" id="comments-container">
 							<%= render 'comments' %>
 							<%= will_paginate @comments %>
 						</section>

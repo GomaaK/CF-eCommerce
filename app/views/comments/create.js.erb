@@ -1,0 +1,8 @@
+
+$("#add_review").html("Thank you for your review!");
+
+$("#comments-container").prepend("<%= j render partial: 'comment', locals: { comment: @comment } %>");
+
+$("#average-rating").attr('data-score', "<%= @product.average_rating %>");
+
+refreshRating();

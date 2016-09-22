@@ -1,6 +1,6 @@
 <% if signed_in? %>
 </br>
-  <%= form_for([@product, @product.comments.build], html: {id: "add_review"}) do |f| %>
+  <%= form_for([@product, @product.comments.build], html: {id: "add_review"}, remote: true) do |f| %>
     <p>
       <%= f.text_area :body ,placeholder: "Give us a review.." %>
     </p>
