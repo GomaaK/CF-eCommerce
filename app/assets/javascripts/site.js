@@ -1,4 +1,5 @@
 $(document).on('ready page:load', function(){
+	$('.img-zoom').elevateZoom();
     $('.rating').raty({ path: '/assets/images', scoreName: 'comment[rating]'  }
     	);
     $('.rated').raty({ path: '/assets/images',
@@ -8,3 +9,6 @@ $(document).on('ready page:load', function(){
       }
     });
 });
+
+
+
