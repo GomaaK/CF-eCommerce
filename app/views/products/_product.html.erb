@@ -4,7 +4,11 @@
         <h4><%=link_to product.name, product %></h4>
       </div>
       <div class="product-image">
-        <%=link_to image_tag(product.image_url,class: "img-responsive product-img") , product %>
+        <% if product.image_url? %>
+          <%=link_to image_tag(product.image_url,class: "img-responsive product-img") , product %>
+        <% else %>
+          <%=link_to image_tag("http://epaper2.mid-day.com/images/no_image_thumb.gif",class: "img-responsive product-img") , product %>
+        <% end %>
       </div>
       <ul class="product-options">
         <li class="price">€<%= product.price %></li>
