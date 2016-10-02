@@ -40,7 +40,6 @@ gem 'redis-rails'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

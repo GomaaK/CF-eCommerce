@@ -207,7 +207,11 @@ GEM
       redis-store (~> 1.2.0)
     redis-store (1.2.0)
       redis (>= 2.2)
+<<<<<<< HEAD
     responders (2.3.0)
+=======
+    responders (2.2.0)
+>>>>>>> fe19955fb78732a89a768cfd7d66645ab4c93202
       railties (>= 4.2.0, < 5.1)
     rest-client (2.0.0)
       http-cookie (>= 1.0.2, < 2.0)
@@ -281,6 +285,10 @@ DEPENDENCIES
   puma (~> 3.0)
   rails (~> 5.0.0)
   rails-controller-testing
+<<<<<<< HEAD
+=======
+  rails_12factor
+>>>>>>> fe19955fb78732a89a768cfd7d66645ab4c93202
   redis-rails
   rspec-core!
   rspec-expectations!
