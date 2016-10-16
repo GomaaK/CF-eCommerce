@@ -1,5 +1,6 @@
 App.product = App.cable.subscriptions.create("ProductChannel", {
   connected: function() {
+    console.log("Connected");
     // Called when the subscription is ready for use on the server
   },
 
@@ -9,6 +10,7 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
 
   received: function(data) {
     // Called when there's incoming data on the websocket for this channel
+    console.log("Got a new comment");
   	$(".new-comment").show();
   }
 });
