@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-	mount ActionCable.server => '/cable'
+	
   devise_for :users, :controllers => { :registrations => "user_registrations" }
   resources :users
   resources :products do
@@ -23,6 +23,9 @@ Rails.application.routes.draw do
   get 'payments/success'
   post 'static_pages/thank_you'
   resources :orders, only: [:index, :show, :create, :destroy]
+
+
+  mount ActionCable.server => '/cable'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

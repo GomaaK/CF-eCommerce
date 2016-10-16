@@ -85,5 +85,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.web_socket_server_url = "wss://cf-my-first-ruby-app.herokuapp.com/cable"
-config.action_cable.allowed_request_origins = ['https://cf-my-first-ruby-app.herokuapp.com', 'http://cf-my-first-ruby-app.herokuapp.com']
+  config.action_cable.allowed_request_origins = ['https://cf-my-first-ruby-app.herokuapp.com', 'http://cf-my-first-ruby-app.herokuapp.com']
 end

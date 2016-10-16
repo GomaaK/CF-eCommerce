@@ -38,8 +38,10 @@
 				</div>
 			</div> 
 		</div>
-		<div class="container-fluid">		
+		<div class="container-fluid">	
+
 			<div class="col-md-12 product-info">
+
 					<ul id="myTab" class="nav nav-tabs nav_tabs">
 						
 						<li class="active"><a href="#service-one" data-toggle="tab">COMMENTS</a></li>
@@ -49,8 +51,10 @@
 					</ul>
 				<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade in active" id="service-one">
-						<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+						
 					<%= render 'new_comment' %>	
+
+					<div class="alert alert-info new-comment" style="display:none" role="alert">A new comment was posted!</div>
 						<section class="container" id="comments-container">
 
 							<%= render 'comments' %>
