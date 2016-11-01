@@ -14,13 +14,13 @@ describe UsersController, :type => :controller do
        end
 
        it "loads the correct user details" do
-         get :show, id: @user.id
+         get :show, params: {id: @user.id}
          expect(response.status).to eq 200
          expect(assigns(:user)).to eq @user
        end
 
        it "doesn't load the second user" do
-         get :show, id: @user2.id
+         get :show, params: {id: @user2.id}
          expect(response.status).to eq 302
          expect(response).to redirect_to(root_path)
        end
@@ -28,7 +28,7 @@ describe UsersController, :type => :controller do
 
      context "No user is logged in" do
        it "redirects to login" do
-         get :show, id: @user.id
+         get :show, params: {id: @user.id}
          expect(response).to redirect_to(root_path)
        end
      end

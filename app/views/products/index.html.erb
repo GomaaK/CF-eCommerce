@@ -5,10 +5,11 @@
   <p id="notice"><%= notice %></p>
 
 
-  <div class="new-product">
-    <button class="button"><%= link_to 'New Product', new_product_path %></button>
-  </div>
-  <h1>Listing Products</h1>
+  <% if signed_in? && current_user.admin? %>
+    <div class="new-product">
+      <button class="btn btn-primary"><%= link_to 'New Product', new_product_path %></button>
+    </div>
+  <% end %>
   <% cache(cache_key_products) do %>
   <%= render @products %>
   <% end %>

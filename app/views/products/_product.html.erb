@@ -1,19 +1,21 @@
 <% cache product do %>
     <div class="container col-md-3 col-xs-12 product-container" id="container-<%= product.id %>">
-      <div class="product-title">
-        <h4><%=link_to product.name, product %></h4>
-      </div>
-      <div class="product-image">
+      <div class="image-container">
         <% if product.image_url? %>
-          <%=link_to image_tag(product.image_url,class: "img-responsive product-img") , product %>
+          <%=link_to image_tag(product.image_url,class: "img-responsive product-image") , product %>
         <% else %>
-          <%=link_to image_tag("http://epaper2.mid-day.com/images/no_image_thumb.gif",class: "img-responsive product-img") , product %>
+          <%=link_to image_tag("http://epaper2.mid-day.com/images/no_image_thumb.gif",class: "img-responsive product-image") , product %>
         <% end %>
       </div>
-      <ul class="product-options">
-        <li class="price">€<%= product.price %></li>
-        <li class="product-buy"><a class="btn btn-custom">Add to Cart</a></li>
-      </ul>
+      <div class="product-title">
+          <strong><%=product.name%></strong>
+      </div>
+      <div class="grid-product-info">
+        <div class="product-text">
+          <div class="price" id="product-price-<%= product.id %>">€<%= product.price %></div>
+        </div>
+        
+      </div>
       <% if signed_in? && current_user.admin? %>
         <div class="action-buttons">
           <%= link_to "Edit", edit_product_path(product) %>
